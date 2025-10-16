@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>MinnaKaiwa - Minna no Nihongo Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #4f8cff 0%, #ffb86b 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(79,140,255,0.10);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        h1 {
+            color: #4f8cff;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .desc {
+            color: #444;
+            font-size: 1.15rem;
+            margin-bottom: 28px;
+        }
+        .nav {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .nav a {
+            display: block;
+            background: linear-gradient(135deg, #4f8cff 60%, #ffb86b 100%);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.13rem;
+            padding: 16px 0;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(79,140,255,0.10);
+            transition: background 0.2s, transform 0.1s;
+        }
+        .nav a:hover {
+            background: linear-gradient(135deg, #2d5fa4 60%, #ff7e5f 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+        .footer {
+            margin-top: 38px;
+            color: #888;
+            font-size: 0.98rem;
+        }
+        .footer-links {
+            margin-top: 16px;
+        }
+        .footer-links a {
+            color: #4f8cff;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 MinnaKaiwa</h1>
+        <div class="desc">
+            Platform latihan bahasa Jepang berdasarkan <b>Minna no Nihongo</b><br>
+            Pilih fitur latihan: <b>Kaiwa</b> (Percakapan) &amp; <b>Renshu</b> (Latihan) per bab.
+        </div>
+        <div class="nav">
+            <a href="/audios">🎵 Daftar Audio Per Bab</a>
+            <a href="/chat">💬 Mode Chat Suara</a>
+            <a href="/about">ℹ️ Tentang MinnaKaiwa</a>
+        </div>
+        <div class="footer">
+            &copy; 2025 MinnaKaiwa &mdash; Minna no Nihongo Practice Platform
+            <div class="footer-links">
+                <a href="https://github.com/datadebasa/minna-nihongo-kaiwa-renshu" target="_blank">📂 Source Code</a>
+                <a href="https://sodikinnaa.my.id/" target="_blank">👨‍💻 Developer</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+function addBubble(text, sender) {
+    if (!window.chatHasContent) {
+        const placeholder = document.getElementById('placeholder');
+        if (placeholder) placeholder.style.display = 'none';
+        window.chatHasContent = true;
+    }
+    const bubble = document.createElement('div');
+    bubble.className = 'chat-bubble ' + sender;
+
+    // Avatar
+    const avatar = document.createElement('div');
+    avatar.className = 'avatar';
+    avatar.innerHTML = sender === 'user' ? '🧑' : '🤖';
+
+    // Text
+    const bubbleText = document.createElement('div');
+    bubbleText.className = 'bubble-text';
+    bubbleText.textContent = text;
+
+    if (sender === 'user') {
+        bubble.appendChild(bubbleText);
+        bubble.appendChild(avatar);
+    } else {
+        bubble.appendChild(avatar);
+        bubble.appendChild(bubbleText);
+    }
+
+    const chatDiv = document.getElementById('chat');
+    if (chatDiv) {
+        chatDiv.appendChild(bubble);
+        chatDiv.scrollTop = chatDiv.scrollHeight;
+    }
+}
+
+// Cek dukungan SpeechRecognition
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition;
+let currentLang = 'id-ID';
+let isListening = false;
+window.chatHasContent = false;
+
+if (!window.SpeechRecognition) {
+    const status = document.getElementById('status');
+    if (status) {
+        status.textContent = "Browser Anda tidak mendukung Speech Recognition.";
+        status.style.background = "#b0b0b0";
+    }
+} else {
+    recognition = new window.SpeechRecognition();
+    recognition.lang = currentLang;
+    recognition.interimResults = false;
+    recognition.continuous = false;
+
+    recognition.onstart = function() {
+        isListening = true;
+        const status = document.getElementById('status');
+        if (status) {
+            status.textContent = "Status: Mendengarkan...";
+            status.style.background = "var(--status-listen)";
+        }
+        const startBtn = document.getElementById('start');
+        const stopBtn = document.getElementById('stop');
+        if (startBtn) startBtn.disabled = true;
+        if (stopBtn) stopBtn.disabled = false;
+    };
+
+    recognition.onend = function() {
+        isListening = false;
+        const status = document.getElementById('status');
+        if (status) {
+            status.textContent = "Status: Tidak aktif";
+            status.style.background = "var(--status-bg)";
+        }
+        const startBtn = document.getElementById('start');
+        const stopBtn = document.getElementById('stop');
+        if (startBtn) startBtn.disabled = false;
+        if (stopBtn) stopBtn.disabled = true;
+    };
+
+    recognition.onerror = function(event) {
+        const status = document.getElementById('status');
+        if (status) {
+            status.textContent = "Terjadi error: " + event.error;
+            status.style.background = "var(--status-error)";
+        }
+    };
+
+    document.getElementById('start') && (document.getElementById('start').onclick = function() {
+        currentLang = document.getElementById('lang').value;
+        recognition.lang = currentLang;
+        recognition.start();
+    });
+
+    document.getElementById('stop') && (document.getElementById('stop').onclick = function() {
+        recognition.stop();
+    });
+
+    document.getElementById('lang') && (document.getElementById('lang').onchange = function() {
+        currentLang = this.value;
+        recognition.lang = (currentLang === 'all') ? 'id-ID' : currentLang;
+    });
+}
+
+// Fungsi untuk memanggil API kaiwa
+async function fetchKaiwaResponse(userInput, lang) {
+    // Endpoint relative agar fetch ke host sendiri (bisa localhost atau production)
+    const apiUrl = "/api/v1/kaiwa";
+    const formData = new FormData();
+    formData.append('promt', userInput);
+    formData.append('bab_start', '1');
+    formData.append('bab_end', '1');
+    // Anda bisa menyesuaikan bab_start dan bab_end sesuai kebutuhan
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            body: formData
+        });
+        if (!response.ok) {
+            return "response.ok: " + response + " | Maaf, terjadi kesalahan pada server.";
+        }
+        const data = await response.json();
+        // Asumsikan respons API: { "result": "..." } atau { "response": "..." }
+        return data.result || data.response || "Tidak ada balasan dari server.";
+    } catch (e) {
+        return "Gagal menghubungi server: " + e;
+    }
+}
+
+function speak(text, lang) {
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = lang;
+    window.speechSynthesis.speak(utter);
+}
+
+if (window.SpeechRecognition) {
+    recognition.onresult = async function(event) {
+        const hasil = event.results[0][0].transcript;
+        addBubble(hasil, 'user');
+
+        // Dapatkan bahasa yang dipilih
+        currentLang = document.getElementById('lang').value;
+
+        // Panggil API kaiwa
+        addBubble("⏳ Memproses...", 'bot');
+        const chatDiv = document.getElementById('chat');
+        let loadingBubble;
+        if (chatDiv) {
+            loadingBubble = chatDiv.lastChild;
+        }
+
+        const balasan = await fetchKaiwaResponse(hasil, currentLang);
+
+        // Hapus bubble loading jika ada
+        if (loadingBubble && loadingBubble.classList.contains('chat-bubble')) {
+            chatDiv.removeChild(loadingBubble);
+        }
+
+        addBubble(balasan, 'bot');
+
+        // Ucapkan respon bot
+        // Deteksi bahasa balasan untuk pengucapan
+        let utterLang = 'id-ID';
+        if (currentLang === 'ja-JP' || (currentLang === 'all' && /^[ぁ-んァ-ン一-龥]/.test(balasan))) {
+            utterLang = 'ja-JP';
+        }
+        speak(balasan, utterLang);
+    }
+}
+</script>
