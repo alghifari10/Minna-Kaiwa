@@ -10,7 +10,7 @@ MinnaKaiwa menggunakan Flask 3 sebagai backend dengan beberapa endpoint utama un
 
 ```
 Development: http://localhost:3000
-Production:  https://minna-nihongo-kaiwa-renshu.vercel.app
+Production:  minna-nihongo-kaiwa-renshu-ccfu.vercel.app
 ```
 
 ## 📚 Endpoints
