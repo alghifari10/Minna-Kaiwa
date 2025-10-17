@@ -11,7 +11,7 @@ Kami sangat menghargai kontribusi dari komunitas! MinnaKaiwa adalah proyek open 
 ### 🐛 Melaporkan Bug
 
 1. **Cek Issues Terlebih Dahulu**
-   - Periksa [GitHub Issues](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues)
+   - Periksa [GitHub Issues](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/issues)
    - Pastikan bug belum dilaporkan
 
 2. **Buat Issue Baru**
@@ -264,19 +264,19 @@ pre-commit run --all-files
 
 ### Resources
 - **Documentation** - Lihat [docs/](docs/) folder
-- **Issues** - [GitHub Issues](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues)
-- **Discussions** - [GitHub Discussions](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/discussions)
+- **Issues** - [GitHub Issues](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/issues)
+- **Discussions** - [GitHub Discussions](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/discussions)
 
 ### Contact
-- **Email** - support@minnakaiwa.com
-- **Developer Website** - [https://sodikinnaa.my.id/](https://sodikinnaa.my.id/)
+- **Email** - m.arshad.al.ghifari30@gmail.com 
+- **Developer Website** - [portfolio-al-ghifari.vercel.app/](portfolio-al-ghifari.vercel.app/)
 
 ## 🔗 Quick Links
 
-- **Source Code:** [https://github.com/datadebasa/minna-nihongo-kaiwa-renshu](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu)
+- **Source Code:** [https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu)
 - **Live Demo:** [https://minnakaiwa.vercel.app/](https://minnakaiwa.vercel.app/)
-- **Issues:** [https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues)
-- **Pull Requests:** [https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/pulls](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/pulls)
+- **Issues:** [https://https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/issues](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues)
+- **Pull Requests:** [https://https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/pulls](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/pulls)
 
 ## 📋 Checklist
 
