@@ -258,7 +258,7 @@ fetch('/api/v1/kaiwa', {
 ## 🔗 Related Links
 
 - **Source Code:** [https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu)
-- **Developer Website:** [https://sodikinnaa.my.id/](portfolio-al-ghifari.vercel.app/)
+- **Developer Website:** [portfolio-al-ghifari.vercel.app/](portfolio-al-ghifari.vercel.app/)
 - **Live Demo:** [minna-nihongo-kaiwa-renshu-ccfu.vercel.app/](minna-nihongo-kaiwa-renshu-ccfu.vercel.app/)
 
 ---
