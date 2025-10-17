@@ -319,9 +319,9 @@ sudo journalctl -u minnakaiwa -f
 Jika mengalami masalah:
 
 1. **Cek dokumentasi** - Lihat [Troubleshooting](troubleshooting.md)
-2. **Search issues** - Cari di [GitHub Issues](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues)
+2. **Search issues** - Cari di [GitHub Issues](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/issues)
 3. **Buat issue baru** - Jika masalah belum ada solusi
-4. **Hubungi support** - Email ke support@minnakaiwa.com
+4. **Hubungi support** - Email ke m.arshad.al.ghifari30@gmail.com 
 
 ---
 
