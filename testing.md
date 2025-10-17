@@ -413,9 +413,9 @@ def test_file_upload_security(self, client):
 
 ## 🔗 Related Links
 
-- **Source Code:** [https://github.com/datadebasa/minna-nihongo-kaiwa-renshu](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu)
-- **Developer Website:** [https://sodikinnaa.my.id/](https://sodikinnaa.my.id/)
-- **Live Demo:** [https://minnakaiwa.vercel.app/](https://minnakaiwa.vercel.app/)
+- **Source Code:** [https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu)
+- **Developer Website:** [https://portfolio-al-ghifari.vercel.app/](https://portfolio-al-ghifari.vercel.app/)
+- **Live Demo:** [https://minna-nihongo-kaiwa-renshu-ccfu.vercel.app/](https://minna-nihongo-kaiwa-renshu-ccfu.vercel.app/)
 
 ---
 
