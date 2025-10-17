@@ -191,7 +191,7 @@ Dokumentasi lengkap tentang semua fitur yang tersedia di platform MinnaKaiwa.
 ### 🆘 Getting Help
 - **Documentation** - Lihat [Installation](installation.md) dan [Troubleshooting](troubleshooting.md)
 - **GitHub Issues** - Report bugs dan request features
-- **Email Support** - support@minnakaiwa.com
+- **Email Support** - m.arshad.al.ghifari30@gmail.com 
 - **Community** - Join discussions di GitHub
 
 ### 💡 Feature Requests
@@ -202,9 +202,9 @@ Dokumentasi lengkap tentang semua fitur yang tersedia di platform MinnaKaiwa.
 
 ## 🔗 Links
 
-- **Source Code:** [https://github.com/datadebasa/minna-nihongo-kaiwa-renshu](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu)
-- **Developer Website:** [https://sodikinnaa.my.id/](https://sodikinnaa.my.id/)
-- **Live Demo:** [https://minna-nihongo-kaiwa-renshu.vercel.app/](https://minna-nihongo-kaiwa-renshu.vercel.app/)
+- **Source Code:** [https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu)
+- **Developer Website:** [https://portfolio-al-ghifari.vercel.app/](https://portfolio-al-ghifari.vercel.app/)
+- **Live Demo:** [minna-nihongo-kaiwa-renshu-ccfu.vercel.app/](minna-nihongo-kaiwa-renshu-ccfu.vercel.app/)
 
 ---
 
