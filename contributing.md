@@ -274,7 +274,7 @@ pre-commit run --all-files
 ## 🔗 Quick Links
 
 - **Source Code:** [https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu)
-- **Live Demo:** [https://minnakaiwa.vercel.app/](https://minnakaiwa.vercel.app/)
+- **Live Demo:** [minna-nihongo-kaiwa-renshu-ccfu.vercel.app/](minna-nihongo-kaiwa-renshu-ccfu.vercel.app/)
 - **Issues:** [https://https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/issues](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues)
 - **Pull Requests:** [https://https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/pulls](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu/pulls)
 
