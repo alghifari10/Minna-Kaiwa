@@ -257,13 +257,13 @@ fetch('/api/v1/kaiwa', {
 
 ## 🔗 Related Links
 
-- **Source Code:** [https://github.com/datadebasa/minna-nihongo-kaiwa-renshu](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu)
-- **Developer Website:** [https://sodikinnaa.my.id/](https://sodikinnaa.my.id/)
-- **Live Demo:** [https://minna-nihongo-kaiwa-renshu.vercel.app/](https://minna-nihongo-kaiwa-renshu.vercel.app/)
+- **Source Code:** [https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu)
+- **Developer Website:** [https://sodikinnaa.my.id/](portfolio-al-ghifari.vercel.app/)
+- **Live Demo:** [minna-nihongo-kaiwa-renshu-ccfu.vercel.app/](minna-nihongo-kaiwa-renshu-ccfu.vercel.app/)
 
 ---
 
 <div align="center">
-  <p><strong>MinnaKaiwa - Minna no Nihongo Practice Platform</strong></p>
+  <p><strong>Minna Kaiwa - Minna no Nihongo Practice Platform</strong></p>
   <p>API Documentation untuk Platform Pembelajaran Bahasa Jepang 🇯🇵</p>
 </div> 
