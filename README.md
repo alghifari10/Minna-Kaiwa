@@ -1,118 +1,156 @@
-# 📚 Dokumentasi MinnaKaiwa
+# 📚 MinnaKaiwa - Minna no Nihongo Practice Platform
 
-Selamat datang di dokumentasi **MinnaKaiwa** - Platform latihan bahasa Jepang berbasis Minna no Nihongo.
-
-## 📖 Daftar Isi
-
-### 🚀 Quick Start
-- [Instalasi](installation.md)
-- [Konfigurasi](configuration.md)
-- [Deployment](deployment.md)
-
-### 🛠️ Development
-- [Arsitektur](architecture.md)
-- [API Reference](api-reference.md)
-- [Testing](testing.md)
-- [Contributing](contributing.md)
-
-### 📋 User Guide
-- [Fitur Utama](features.md)
-- [Audio Learning](audio-learning.md)
-- [Voice Chat](voice-chat.md)
-- [Troubleshooting](troubleshooting.md)
-
-### 🔧 Technical
-- [Database Schema](database.md)
-- [Security](security.md)
-- [Performance](performance.md)
-- [Monitoring](monitoring.md)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdatadebasa%2Fminna-nihongo-kaiwa-renshu&demo-title=MinnaKaiwa&demo-description=Japanese%20Learning%20Platform%20based%20on%20Minna%20no%20Nihongo&demo-url=https%3A%2F%2Fminnakaiwa.vercel.app%2F&demo-image=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Fv1669994156%2Frandom%2Fflask.png)
 
 ## 🎯 Tentang MinnaKaiwa
 
-MinnaKaiwa adalah platform pembelajaran bahasa Jepang yang dirancang untuk membantu pembelajar berlatih percakapan dan latihan berdasarkan kurikulum **Minna no Nihongo**.
+MinnaKaiwa adalah platform latihan bahasa Jepang yang berbasis pada kurikulum **Minna no Nihongo**. Platform ini dirancang untuk membantu pembelajar bahasa Jepang berlatih percakapan dan latihan secara interaktif.
 
 ### ✨ Fitur Utama
 
-- **🗣️ Kaiwa (Percakapan)** - Latihan percakapan per bab
-- **📖 Renshu (Latihan)** - Latihan tata bahasa dan kosakata
-- **🎵 Audio Learning** - Pemutaran audio pembelajaran
-- **💬 Voice Chat** - Mode chat suara untuk latihan
-- **📱 Responsive Design** - Berfungsi optimal di semua perangkat
+- **🗣️ Kaiwa (Percakapan)** - Latihan percakapan bahasa Jepang per bab
+- **📖 Renshu (Latihan)** - Latihan tata bahasa dan kosakata per bab
+- **🎵 Audio Learning** - Pemutaran audio pembelajaran per bab
+- **💬 Voice Chat** - Mode chat suara untuk latihan berbicara
+- **📱 Responsive Design** - Berfungsi optimal di desktop dan mobile
 
-### 🛠️ Teknologi
+### 🎓 Berdasarkan Minna no Nihongo
+
+Platform ini menggunakan kurikulum standar **Minna no Nihongo** yang merupakan buku pembelajaran bahasa Jepang yang paling populer dan diakui secara internasional. Setiap bab disesuaikan dengan struktur pembelajaran buku tersebut.
+
+## 🚀 Demo
+
+**Live Demo:** [https://minna-nihongo-kaiwa-renshu.vercel.app/](https://minna-nihongo-kaiwa-renshu.vercel.app/)
+
+## 🛠️ Teknologi
 
 - **Backend:** Flask 3 (Python)
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Deployment:** Vercel
-- **Audio:** HTML5 Audio API
-- **Voice:** Web Speech API
+- **Audio Processing:** Native HTML5 Audio API
+- **Voice Chat:** Web Speech API
 
-## 🚀 Quick Start
+## 📦 Instalasi & Penggunaan
 
 ### Prerequisites
 
 - Python 3.8+
 - pip (Python package manager)
-- Node.js (untuk Vercel CLI)
 
-### Instalasi Cepat
+### Langkah Instalasi
 
+1. **Clone Repository**
 ```bash
-# Clone repository
 git clone https://github.com/datadebasa/minna-nihongo-kaiwa-renshu.git
 cd minna-nihongo-kaiwa-renshu
+```
 
-# Install dependencies
+2. **Install Dependencies**
+```bash
 pip install -r requirements.txt
-npm install -g vercel
+```
 
-# Run development server
+3. **Setup Audio Files**
+```bash
+# Pastikan folder audio tersedia di api/static/assets/0-0001-01-230001/
+# Format file: CD_001_001_001.mp3, CD_001_001_002.mp3, dst.
+```
+
+4. **Run Locally**
+```bash
+# Menggunakan Vercel CLI
+npm i -g vercel
 vercel dev
+
+# Atau menggunakan Flask langsung
+cd api
+python index.py
 ```
 
 Aplikasi akan tersedia di `http://localhost:3000`
 
-## 📁 Struktur Dokumentasi
+## 📁 Struktur Proyek
 
 ```
-docs/
-├── README.md              # Halaman utama dokumentasi
-├── installation.md        # Panduan instalasi
-├── configuration.md       # Konfigurasi aplikasi
-├── deployment.md          # Panduan deployment
-├── architecture.md        # Arsitektur sistem
-├── api-reference.md       # Dokumentasi API
-├── testing.md            # Panduan testing
-├── contributing.md        # Panduan kontribusi
-├── features.md           # Fitur aplikasi
-├── audio-learning.md     # Panduan audio learning
-├── voice-chat.md         # Panduan voice chat
-├── troubleshooting.md     # Troubleshooting
-├── database.md           # Schema database
-├── security.md           # Keamanan aplikasi
-├── performance.md        # Optimasi performa
-└── monitoring.md         # Monitoring aplikasi
+minna-nihongo-kaiwa-renshu/
+├── api/
+│   ├── index.py              # Flask application
+│   ├── templates/            # HTML templates
+│   │   ├── index.html        # Homepage
+│   │   ├── chat.html         # Voice chat interface
+│   │   ├── about.html        # About page
+│   │   ├── audio_list.html   # Audio listing
+│   │   └── audio_player.html # Audio player
+│   └── static/
+│       └── assets/           # Audio files
+├── requirements.txt           # Python dependencies
+├── vercel.json              # Vercel configuration
+└── README.md               # This file
 ```
+
+## 🎵 Format Audio
+
+Audio files harus mengikuti format:
+- **Kaiwa:** `CD_001_001_001.mp3` (Bab 1, Kaiwa)
+- **Renshu:** `CD_001_001_002.mp3` (Bab 1, Renshu)
+
+## 🔧 Konfigurasi
+
+### Environment Variables
+
+```bash
+# Backend API URL (opsional)
+BACKEND_URL=https://open-source-backend.vercel.app/kaiwa
+```
+
+### Vercel Configuration
+
+File `vercel.json` sudah dikonfigurasi untuk deployment otomatis di Vercel.
+
+## 🚀 Deployment
+
+### One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdatadebasa%2Fminna-nihongo-kaiwa-renshu)
+
+### Manual Deployment
+
+1. Push ke GitHub repository
+2. Connect dengan Vercel
+3. Deploy otomatis
 
 ## 🤝 Kontribusi
 
-Kami sangat menghargai kontribusi dari komunitas! Silakan lihat [CONTRIBUTING.md](../CONTRIBUTING.md) untuk panduan lengkap.
+Kontribusi sangat welcome! Silakan:
 
-## 📞 Support
+1. Fork repository ini
+2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
 
-Jika Anda membutuhkan bantuan:
+## 📝 License
 
-- **Issues:** [GitHub Issues](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/datadebasa/minna-nihongo-kaiwa-renshu/discussions)
-- **Email:** support@minnakaiwa.com
+Distributed under the MIT License. See `LICENSE` for more information.
 
-## 📄 License
+## 📞 Kontak
 
-Proyek ini dilisensikan di bawah MIT License. Lihat [LICENSE](../LICENSE) untuk detail lebih lanjut.
+- **GitHub :** (https://github.com/alghifari10)
+- **Project Link :** [https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu](https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu)
+- **Email :** m.arshad.al.ghifari30@gmail.com
+- **Phone :** https://wa.me//+6282322787708
+
+## 🙏 Acknowledgments
+
+- **Minna no Nihongo** - Kurikulum pembelajaran bahasa Jepang
+- **Flask** - Web framework untuk Python
+- **Vercel** - Platform deployment
+- **Web Speech API** - Voice recognition technology
+- **AL GHIFARI** - Developer utama platform ini
 
 ---
 
 <div align="center">
+  <p>Made with ❤️ for Japanese learners worldwide</p>
   <p><strong>MinnaKaiwa - Minna no Nihongo Practice Platform</strong></p>
-  <p>Membantu pembelajaran bahasa Jepang di seluruh dunia 🇯🇵</p>
-</div> 
+</div>
