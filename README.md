@@ -41,7 +41,7 @@ Platform ini menggunakan kurikulum standar **Minna no Nihongo** yang merupakan b
 
 1. **Clone Repository**
 ```bash
-git clone https://github.com/datadebasa/minna-nihongo-kaiwa-renshu.git
+git clone https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu.git
 cd minna-nihongo-kaiwa-renshu
 ```
 
@@ -111,7 +111,7 @@ File `vercel.json` sudah dikonfigurasi untuk deployment otomatis di Vercel.
 
 ### One-Click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdatadebasa%2Fminna-nihongo-kaiwa-renshu)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/minna-nihongo-kaiwa-renshu-ccfu.vercel.app)
 
 ### Manual Deployment
 
