@@ -58,7 +58,7 @@ sudo apt install git
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/datadebasa/minna-nihongo-kaiwa-renshu.git
+git clone https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu
 cd minna-nihongo-kaiwa-renshu
 ```
 
@@ -171,7 +171,7 @@ sudo apt update
 sudo apt install nginx python3 python3-pip
 
 # Clone repository
-git clone https://github.com/datadebasa/minna-nihongo-kaiwa-renshu.git
+git clone https://github.com/alghifari10/Minna-Nihongo-Kaiwa-Renshu.git
 cd minna-nihongo-kaiwa-renshu
 
 # Install dependencies
